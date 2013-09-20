@@ -1,6 +1,10 @@
 OAM Single Sing On Login Pages
 ==============================
 
+You can use this application either stand alone or in combination with
+Oracle Access Manager 11gR2 or greater.  Usage as ECC and DCC has been
+tested.
+
 ### Used gems
 
 * Sinatra
