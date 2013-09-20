@@ -1,15 +1,15 @@
 OAM Single Sing On Login Pages
 ==============================
 
-author: kapfenho, july 2013
+### Used gems
 
-
-Used gems:
 * Sinatra
 * HAML
 * I18n
+* Capistrano 3
 
-Assets:
+### Assets
+
 * Twitter Bootstrap 3.0
 
 
@@ -20,19 +20,19 @@ Assets:
 Currently Unicorn is listed in Gemfile as application server, but you
 can use any server you like.
 
-  # local
-  $ bunde --binstubs
+    # local
+    $ bunde --binstubs
 
-  # production
-  $ bin/cap production deploy
+    # production
+    $ bin/cap production deploy
 
 ### JVM Deployment
 
 Deployment on any service that supports the JSR 154 (Java Servlet 2.4 
 Specification).
 
-  $ bundle install
-  $ warble war      #  JRuby version (JVM)
+    $ bundle install
+    $ warble war      #  JRuby version (JVM)
 
 
 ## Interfaces
