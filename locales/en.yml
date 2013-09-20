@@ -1,0 +1,21 @@
+en:
+  login_title: "Single Sign On"
+  remember: "Remember"
+  login: "Login"
+  cancel: "Cancel"
+  user: "user"
+  password: "password"
+  pity: "What a pity!"
+  dealer_number: "dealer number"
+  OAM-1: "An incorrect Username or Password was specified."
+  OAM-2: "An incorrect Username or Password was specified."
+  OAM-3: "Unexpected Error occurred while processing credentials. Please retry your action again!"
+  OAM-4: "System error. Please contact the System Administrator."
+  OAM-5: "The user account is locked or disabled. Please contact the System Administrator."
+  OAM-6: "The user has already reached the maximum allowed number of sessions. Please close one of the existing sessions before trying to login again."
+  OAM-7: "System error. Please re-try your action. If you continue to get this error, please contact the Administrator."
+  OAM-8: "Authentication failed."
+  OAM-9: "System error. Please re-try your action. If you continue to get this error, please contact the Administrator."
+  OAM-10: "The password has expired. Please contact the System Administrator."
+
+

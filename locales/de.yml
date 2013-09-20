@@ -1,0 +1,21 @@
+de:
+  login_title: "Single Sign On"
+  remember: "Merken"
+  login: "Anmelden"
+  cancel: "Abbrechen"
+  user: "Benutzer"
+  password: "Passwort"
+  pity: "Ohje..."
+  dealer_number: "Händlernummer"
+  OAM-1: "Bitte geben Sie ihren Benutzer ein"
+  OAM-2: "Bitte geben Sie ihr Passwort ein"
+  OAM-3: "Es ist ein technischer Fehler aufgetreten. Bitte versuchen Sie es erneut."
+  OAM-4: "Es ist ein technischer Fehler aufgetreten. Bitte kontaktieren Sie den 3Vertrieb unter der Tel.Nr 0800 303070"
+  OAM-5: "Ihr Konto wurde gesperrt, wenden Sie sich bitte an den 3Vertrieb unter der Tel. Nr. 0800 303070"
+  OAM-6: "Sie haben die maximale Anzahl von Sitzungen überschritten. Bitte schließen sie offenen Sitzungen."
+  OAM-7: "Es ist ein technischer Fehler aufgetreten. Bitte versuchen Sie es erneut."
+  OAM-8: "Benutzername und Passwort stimmen leider nicht überein."
+  OAM-9: "Es ist ein technischer Fehler aufgetreten. Falls dies weiterhin auftritt kontaktieren Sie bitte den 3Vertrieb unter der Tel.Nr 0800 303070"
+  OAM-10: "Ihr Passwort ist abgelaufen.Bitte kontaktieren Sie den 3Vertrieb unter der Tel. Nr. 0800 303070"
+
+

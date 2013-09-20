@@ -1,0 +1,23 @@
+## 
+# Capistrano app custom tasks for unicorn control 
+#
+# writen by: Velimir
+#
+#
+# last update: 2013-09-18
+
+namespace :dev do
+
+  desc "test"
+  task :test do
+    on roles :all do
+      tmp_dir = "/tmp"
+      if test ( "[ -L #{tmp_dir} ]")
+        info "Test works"
+        execute "ls, #{tmp_dir}"
+      else
+        info ":test does not work"
+      end
+    end
+  end
+end

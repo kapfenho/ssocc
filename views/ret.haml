@@ -1,0 +1,36 @@
+.container
+  %form.form-signin{:action => "/oam/server/auth_cred_submit", :method => "post", :autocomplete => "off", :name => "loginData"}
+    %h2.form-signin-heading= t("login_title")
+    - if @error
+      %div.alert.alert-danger
+        %h4= t("pity", locale: get_locale)
+        = @error
+    %div.form-group
+      %label{:for => "usr_account"}= t("dealer_number", locale: get_locale)
+      %input.form-control{:type => "text",     :name => "usr_account", :placeholder => t("dealer_number", locale: get_locale), :autofocus => "true"}
+    %div.form-group
+      %label{:for => "usr_name"}= t("user", locale: get_locale)
+      %input.form-control{:type => "text",     :name => "usr_name",    :placeholder => t("user",          locale: get_locale)}
+    %div.form-group
+      %label{:for => "password"}=  t("password", locale: get_locale)
+      %input.form-control{:type => "password", :name => "password",    :placeholder => t("password",      locale: get_locale), :autocomplete => "off"}
+    %button.btn.btn-lg.btn-primary.btn-block{:type => "submit"}= t("login",  locale: get_locale)
+    %input.input-block-level{:type => "hidden", :name => "username"}
+    - if @request_id
+      %input.input-block-level{:type => "hidden", :name => "request_id", :value => @request_id }
+    - if @oam_req
+      %input.input-block-level{:type => "hidden", :name => "OAM_REQ", :value => @oam_req }
+ 
+:javascript
+  $("[name^='usr']").change(function () {
+    var _user = '';
+    var _acct = $('[name=usr_account]').val();
+    var _name = $('[name=usr_name]').val();
+    if (_acct.length > 0) {
+      _user = _acct + '_' + _name;
+    } else {
+      _user = _name;
+    }
+   $('[name=username]').val(_user);
+  });
+

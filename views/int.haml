@@ -1,0 +1,20 @@
+.container
+  %form.form-signin{:action => "/oam/server/auth_cred_submit", :method => "post", :autocomplete => "off", :name => "loginData"}
+    %h2.form-signin-heading= t("login_title")
+    - if @error
+      %div.alert.alert-danger
+        %h4= t("pity", locale: get_locale)
+        = @error
+    %div.form-group
+      %label{:for => "username"}= t("user", locale: get_locale)
+      %input.form-control{:type => "text",     :name => "username", :placeholder => t("user", locale: get_locale), :autofocus => "true"}
+    %div.form-group
+      %label{:for => "password"}= t("password", locale: get_locale)
+      %input.form-control{:type => "password", :name => "password", :placeholder => t("password", locale: get_locale), :autocomplete => "off"}
+    %button.btn.btn-lg.btn-primary.btn-block{:type => "submit"}= t("login", locale: get_locale)
+  
+    - if @request_id
+      %input.input-block-level{:type => "hidden", :name => "request_id", :value => @request_id }
+    - if @oam_req
+      %input.input-block-level{:type => "hidden", :name => "OAM_REQ", :value => @oam_req }
+

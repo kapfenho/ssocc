@@ -1,0 +1,77 @@
+## 
+# Capistrano app custom tasks for unicorn control 
+#
+# writen by: Velimir
+#
+#
+# last update: 2013-09-18
+
+## helper functions
+
+# check if remote file exists
+# return: true/false
+def remote_file_exists?(full_path)
+  'true' ==  capture("if [ -e #{full_path} ]; then echo 'true'; fi").strip
+end
+
+
+###
+### Tasks definitions
+###
+
+#
+## unicorn control tasks
+#
+namespace :control do
+
+  desc 'Start application'
+  task :start do
+    on roles(:app) do |host|
+      t_rails_env=fetch(:rails_env)
+      t_stage=fetch(:stage)
+      unicorn_bin="#{current_path}/bin/unicorn"
+      unicorn_stage="config/unicorn/#{t_stage}.rb"
+      execute "cd #{current_path} && #{unicorn_bin} -c #{unicorn_stage} -D -E #{t_rails_env}"
+      info "Started unicorn process: `cat #{current_path}/tmp/pids/unicorn.pid`, on host: #{host}"
+    end
+  end 
+  desc 'Stop application'
+  task :stop do
+    on roles(:app) do |host|
+      unicorn_pid="#{current_path}/tmp/pids/unicorn.pid"
+      if remote_file_exists?("#{unicorn_pid}") 
+        info "Stopping unicorn process: `cat #{unicorn_pid}`, on host: #{host}"
+        execute "kill -s QUIT `cat #{unicorn_pid}`"
+      end
+    end
+  end 
+  desc 'Restart application'
+  task :restart do
+    on roles(:app) do
+      invoke 'control:stop'
+      invoke 'control:start'
+    end
+  end
+end
+#
+## unicorn helper tasks
+#
+namespace :util do
+  
+#   desc "Create missing directory structure"
+#   task :finalize do
+#     on roles(:app) do |host|
+#       info "Creating ./tmp/sockets;./tmp/pids;./log directories in ssocc project"
+#       execute "cd #{current_path} && mkdir -p tmp/pids tmp/sockets log"
+#     end
+#   end
+  desc 'Kills the old unicorn process'
+  task :kill_old do
+    on roles(:app) do
+      info "Killing OLD unicorn process.."
+      unicorn_old_pid="#{shared_path}/tmp/pids/unicorn.pid"
+      execute "kill -s QUIT `cat #{unicorn_old_pid}`"
+    end
+  end
+end
+

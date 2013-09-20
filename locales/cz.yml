@@ -1,0 +1,21 @@
+cz:
+  login_title: "Single Sign On"
+  remember: "Pamataj"
+  login: "Prihlasenie"
+  cancel: "Zrusit"
+  user: "pouzivatel"
+  password: "heslo"
+  pity: "Aka skoda!"
+  dealer_number: "cislo dodavatela"
+  OAM-1: "Bol zadany nekorektny Pozivatel alebo Heslo."
+  OAM-2: "Bol zadany nekorektny Pozivatel alebo Heslo."
+  OAM-3: "Pocas overovania pristupu sa vyskytla neocakavana chyba. Prosim zopakujte postup!"
+  OAM-4: "Systemova chyba. Prosim kontaktujte systemoveho administratora."
+  OAM-5: "Pouzivatelsky ucet bol zablokovany alebo zablokovany. Prosim kontaktujte systemoveho administratora."
+  OAM-6: "Pouzivatel uz dosiahol maximalny pocet dovolenych prihlaseni. Prosim ukoncite jedno zo svojich existujucich prihlaseni pred dalsim pokusom o prihlasenie sa."
+  OAM-7: "Systemova chyba. Prosim opakujte. Ak sa znovu vyskytne tato chyba, prosim kontaktujte systemoveho administratora."
+  OAM-8: "Autentifikacia zlyhala."
+  OAM-9: "Systemova chyba. Prosim opakujte. Ak sa znovu vyskytne tato chyba, prosim kontaktujte systemoveho administratora."
+  OAM-10: "Heslu uz vyprsala platnost. Prosim kontaktujte systemoveho administratora."
+
+
