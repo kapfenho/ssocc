@@ -1,5 +1,5 @@
-OAM Single Sing On Login Pages
-==============================
+SSO login pages for Oracle Access Manager
+=========================================
 
 You can use this application either stand alone or in combination with
 Oracle Access Manager 11gR2 or greater.  Usage as ECC and DCC has been
