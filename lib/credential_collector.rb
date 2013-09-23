@@ -65,7 +65,6 @@ class CredentialCollector < Sinatra::Base
 
   post '/int' do
     @error = t(@env["HTTP_P_ERROR_CODE"], locale: get_locale) if @env["HTTP_P_ERROR_CODE"]
-#    @errorP = t(params[:p_error_code], locale: get_locale) if params[:p_error_code]
     
     haml :int, :format => :html5
   end
